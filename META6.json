@@ -17,9 +17,12 @@
   "resources": [
   ],
   "source-url": "https://github.com/raku-community-modules/Brazilian-FederalDocuments.git",
-  "tags": [ "BRAZIL", "FEDERAL", "VALIDITY"
+  "tags": [
+    "BRAZIL",
+    "FEDERAL",
+    "VALIDITY"
   ],
   "test-depends": [
   ],
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
