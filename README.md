@@ -1,39 +1,49 @@
-# Brazilian::FederalDocuments
+[![Actions Status](https://github.com/raku-community-modules/Brazilian-FederalDocuments/actions/workflows/linux.yml/badge.svg)](https://github.com/raku-community-modules/Brazilian-FederalDocuments/actions) [![Actions Status](https://github.com/raku-community-modules/Brazilian-FederalDocuments/actions/workflows/macos.yml/badge.svg)](https://github.com/raku-community-modules/Brazilian-FederalDocuments/actions) [![Actions Status](https://github.com/raku-community-modules/Brazilian-FederalDocuments/actions/workflows/windows.yml/badge.svg)](https://github.com/raku-community-modules/Brazilian-FederalDocuments/actions)
 
-[![Build Status](https://travis-ci.org/paulohrpinheiro/Brazilian-FederalDocuments.svg)](https://travis-ci.org/paulohrpinheiro/Brazilian-FederalDocuments)
-[![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/paulohrpinheiro/Brazilian-FederalDocuments/master?grs=github&t=white)
+NAME
+====
 
-## Warning
+Brazilian::FederalDocuments - Brazilian federal documents validations
 
-This module was created for a presentation in the [Guru-SP](https://www.gurusp.org/) group:
+SYNOPSIS
+========
 
-https://www.youtube.com/watch?v=Kgy7Qa7LgGs
+```raku
+use Brazilian::FederalDocuments;
 
-## Synopsis
+if FederalDocuments::CPF(number => 6931987887).is-valid {
+    say "Valid CPF!!!"
+}
+else {
+    say "Invalid CPF..."
+}
 
-    use Brazilian::FederalDocuments;
+if FederalDocuments::CNPJ(number => 394411000109).is-valid {
+    say "Valid CNPF!!!"
+}
+else {
+    say "Invalid CNPF..."
+}
+```
 
-    if FederalDocuments::CPF(number => 6931987887).is-valid {
-        say "Valid CPF!!!"
-    } else {
-        say "Invalid CPF..."
-    }
+DESCRIPTION
+===========
 
-    if FederalDocuments::CNPJ(number => 394411000109).is-valid {
-        say "Valid CNPF!!!"
-    } else {
-        say "Invalid CNPF..."
-    }
-
-## Description
-
-In Brazil, there are two numbers of documents used especially for financial
-transactions. For individuals, the CPF (Individual Persons Registry), and for
-companies, the CNPJ (National Registry of Legal Entities).
+n Brazil, there are two numbers of documents used especially for financial transactions. For individuals, the CPF (Individual Persons Registry), and for companies, the CNPJ (National Registry of Legal Entities).
 
 This module verifies that the numbers are valid.
 
-## COPYRIGHT
+AUTHOR
+======
 
-This library is free software; you can redistribute it and/or modify it under
-the terms of the [MIT License](https://en.wikipedia.org/wiki/MIT_License).
+Paulo Henrique Rodrigues Pinheiro
+
+COPYRIGHT AND LICENSE
+=====================
+
+Copyright 2017 - 2020 Paulo Henrique Rodrigues Pinheiro
+
+Copyright 2024 Raku Community
+
+This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
+

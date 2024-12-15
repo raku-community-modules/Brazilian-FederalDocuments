@@ -1,14 +1,25 @@
 {
-    "perl" : "6.c",
-    "name" : "Brazilian::FederalDocuments",
-    "version" : "0.1.0",
-    "description" : "Module for brazilian federal documents validations.",
-    "authors" : [ "Paulo Henrique Rodrigues Pinheiro" ],
-    "license" : "MIT",
-    "provides" : {
-            "Brazilian::FederalDocuments" : "lib/Brazilian/FederalDocuments.pm6"
-        },
-    "depends" : [ ],
-    "resources" : [ ],
-    "source-url" : "git://github.com/paulohrpinheiro/Brazilian-FederalDocuments.git"
+  "auth": "zef:raku-community-modules",
+  "authors": [
+    "Paulo Henrique Rodrigues Pinheiro"
+  ],
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "Brazilian federal documents validations",
+  "license": "MIT",
+  "name": "Brazilian::FederalDocuments",
+  "perl": "6.c",
+  "provides": {
+    "Brazilian::FederalDocuments": "lib/Brazilian/FederalDocuments.rakumod"
+  },
+  "resources": [
+  ],
+  "source-url": "https://github.com/raku-community-modules/Brazilian-FederalDocuments.git",
+  "tags": [ "BRAZIL", "FEDERAL", "VALIDITY"
+  ],
+  "test-depends": [
+  ],
+  "version": "0.1.0"
 }

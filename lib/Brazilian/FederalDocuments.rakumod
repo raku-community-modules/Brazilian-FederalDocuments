@@ -1,6 +1,3 @@
-use v6.c;
-
-
 unit module FederalDocuments;
 
 
@@ -39,7 +36,7 @@ class CPF does Document {
         @!weight-masc-first-digit  = <10 9 8 7 6 5 4 3 2>;
         @!weight-masc-second-digit = <11 10 9 8 7 6 5 4 3 2>;
 
-        self.verify();
+        self.verify;
     }
 }
 
@@ -49,6 +46,56 @@ class CNPJ does Document {
         @!weight-masc-first-digit  = <5 4 3 2 9 8 7 6 5 4 3 2>;
         @!weight-masc-second-digit = <6 5 4 3 2 9 8 7 6 5 4 3 2>;
 
-        self.verify();
+        self.verify;
     }
 }
+
+=begin pod
+
+=head1 NAME
+
+Brazilian::FederalDocuments - Brazilian federal documents validations
+
+=head1 SYNOPSIS
+
+=begin code :lang<raku>
+
+use Brazilian::FederalDocuments;
+
+if FederalDocuments::CPF(number => 6931987887).is-valid {
+    say "Valid CPF!!!"
+}
+else {
+    say "Invalid CPF..."
+}
+
+if FederalDocuments::CNPJ(number => 394411000109).is-valid {
+    say "Valid CNPF!!!"
+}
+else {
+    say "Invalid CNPF..."
+}
+
+=end code
+
+=head1 DESCRIPTION
+
+n Brazil, there are two numbers of documents used especially for financial transactions. For individuals, the CPF (Individual Persons Registry), and for companies, the CNPJ (National Registry of Legal Entities).
+
+This module verifies that the numbers are valid.
+
+=head1 AUTHOR
+
+Paulo Henrique Rodrigues Pinheiro
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright 2017 - 2020 Paulo Henrique Rodrigues Pinheiro
+
+Copyright 2024 Raku Community
+
+This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
+
+=end pod
+
+# vim: expandtab shiftwidth=4
